@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>13533036794-e2o4omo9hjasvom91hd19mrj9kl9tbgp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.13533036794-e2o4omo9hjasvom91hd19mrj9kl9tbgp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCZDXnVxCCTnPB4hZr4p-FG_SxPlewB0ms</string>
+	<key>GCM_SENDER_ID</key>
+	<string>13533036794</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kodeguide.FinanceGuru</string>
+	<key>PROJECT_ID</key>
+	<string>firebase-financeguru</string>
+	<key>STORAGE_BUCKET</key>
+	<string>firebase-financeguru.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:13533036794:ios:3f86b74f6c4d821c</string>
+	<key>DATABASE_URL</key>
+	<string>https://fir-financeguru.firebaseio.com</string>
+</dict>
+</plist>

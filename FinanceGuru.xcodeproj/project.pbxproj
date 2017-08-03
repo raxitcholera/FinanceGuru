@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		780196E51F1193CF000D64DC /* TickerStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780196E41F1193CF000D64DC /* TickerStructs.swift */; };
+		780196E71F119E84000D64DC /* TickerPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780196E61F119E84000D64DC /* TickerPickerViewController.swift */; };
+		780196E91F11A291000D64DC /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780196E81F11A291000D64DC /* StockDetailViewController.swift */; };
+		781879311F0ACAA600DC4F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879301F0ACAA600DC4F31 /* AppDelegate.swift */; };
+		781879331F0ACAA600DC4F31 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879321F0ACAA600DC4F31 /* LoginViewController.swift */; };
+		781879361F0ACAA600DC4F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781879341F0ACAA600DC4F31 /* Main.storyboard */; };
+		781879391F0ACAA600DC4F31 /* FinanceGuru.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 781879371F0ACAA600DC4F31 /* FinanceGuru.xcdatamodeld */; };
+		7818793B1F0ACAA600DC4F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7818793A1F0ACAA600DC4F31 /* Assets.xcassets */; };
+		7818793E1F0ACAA600DC4F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7818793C1F0ACAA600DC4F31 /* LaunchScreen.storyboard */; };
+		781879481F0AD11700DC4F31 /* commonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879451F0AD11700DC4F31 /* commonFunctions.swift */; };
+		7818794F1F0AD17000DC4F31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7818794C1F0AD17000DC4F31 /* Constants.swift */; };
+		781879501F0AD17000DC4F31 /* client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7818794D1F0AD17000DC4F31 /* client.swift */; };
+		781879541F0AE1F700DC4F31 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879531F0AE1F700DC4F31 /* CoreDataStack.swift */; };
+		781879591F0AE55700DC4F31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 781879581F0AE55700DC4F31 /* GoogleService-Info.plist */; };
+		7818795B1F0AEFD100DC4F31 /* PortfolioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7818795A1F0AEFD100DC4F31 /* PortfolioTableViewController.swift */; };
+		781879601F0AF0A100DC4F31 /* StocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7818795F1F0AF0A100DC4F31 /* StocksTableViewController.swift */; };
+		781879621F0BED3100DC4F31 /* clientHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879611F0BED3100DC4F31 /* clientHelper.swift */; };
+		7818799B1F0C700700DC4F31 /* Stock+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879951F0C700700DC4F31 /* Stock+CoreDataClass.swift */; };
+		7818799D1F0C700700DC4F31 /* PortfolioUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879971F0C700700DC4F31 /* PortfolioUser+CoreDataClass.swift */; };
+		781879A31F0C73DF00DC4F31 /* Portfolio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879A11F0C73DF00DC4F31 /* Portfolio+CoreDataClass.swift */; };
+		781879A61F0C77BD00DC4F31 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781879A51F0C77BD00DC4F31 /* CoreDataManager.swift */; };
+		785206101F141F1700B5D384 /* StockTransactions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852060E1F141F1700B5D384 /* StockTransactions+CoreDataClass.swift */; };
+		785206111F141F1700B5D384 /* StockTransactions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852060F1F141F1700B5D384 /* StockTransactions+CoreDataProperties.swift */; };
+		785206131F14218500B5D384 /* StockTransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785206121F14218500B5D384 /* StockTransactionTableViewController.swift */; };
+		785E1C9E1F0DD6880092CF51 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785E1C9D1F0DD6880092CF51 /* StockTableViewCell.swift */; };
+		788EA4AD1F0E06A200F167AB /* PortfolioUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788EA4AA1F0E06A200F167AB /* PortfolioUser+CoreDataProperties.swift */; };
+		788EA4AE1F0E06A200F167AB /* Portfolio+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788EA4AB1F0E06A200F167AB /* Portfolio+CoreDataProperties.swift */; };
+		788EA4AF1F0E06A200F167AB /* Stock+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788EA4AC1F0E06A200F167AB /* Stock+CoreDataProperties.swift */; };
+		78BFF71A1F0D76FC007582E4 /* AddPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BFF7191F0D76FC007582E4 /* AddPortfolioViewController.swift */; };
+		B4EDA638E67DB7FDF07618A2 /* Pods_FinanceGuru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7603CE11F98ABF72C4A5C05 /* Pods_FinanceGuru.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		719DAC646E11712AFDD256C8 /* Pods-FinanceGuru.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceGuru.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinanceGuru/Pods-FinanceGuru.debug.xcconfig"; sourceTree = "<group>"; };
+		780196E41F1193CF000D64DC /* TickerStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerStructs.swift; sourceTree = "<group>"; };
+		780196E61F119E84000D64DC /* TickerPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerPickerViewController.swift; sourceTree = "<group>"; };
+		780196E81F11A291000D64DC /* StockDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
+		7818792D1F0ACAA600DC4F31 /* FinanceGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		781879301F0ACAA600DC4F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		781879321F0ACAA600DC4F31 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		781879351F0ACAA600DC4F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		781879381F0ACAA600DC4F31 /* FinanceGuru.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinanceGuru.xcdatamodel; sourceTree = "<group>"; };
+		7818793A1F0ACAA600DC4F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7818793D1F0ACAA600DC4F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7818793F1F0ACAA600DC4F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781879451F0AD11700DC4F31 /* commonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commonFunctions.swift; sourceTree = "<group>"; };
+		7818794C1F0AD17000DC4F31 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7818794D1F0AD17000DC4F31 /* client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = client.swift; sourceTree = "<group>"; };
+		781879531F0AE1F700DC4F31 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		781879581F0AE55700DC4F31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7818795A1F0AEFD100DC4F31 /* PortfolioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioTableViewController.swift; sourceTree = "<group>"; };
+		7818795F1F0AF0A100DC4F31 /* StocksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksTableViewController.swift; sourceTree = "<group>"; };
+		781879611F0BED3100DC4F31 /* clientHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clientHelper.swift; sourceTree = "<group>"; };
+		781879951F0C700700DC4F31 /* Stock+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stock+CoreDataClass.swift"; sourceTree = "<group>"; };
+		781879971F0C700700DC4F31 /* PortfolioUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PortfolioUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		781879A11F0C73DF00DC4F31 /* Portfolio+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Portfolio+CoreDataClass.swift"; sourceTree = "<group>"; };
+		781879A51F0C77BD00DC4F31 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7852060E1F141F1700B5D384 /* StockTransactions+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StockTransactions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7852060F1F141F1700B5D384 /* StockTransactions+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StockTransactions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		785206121F14218500B5D384 /* StockTransactionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTransactionTableViewController.swift; sourceTree = "<group>"; };
+		785E1C9D1F0DD6880092CF51 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		788EA4AA1F0E06A200F167AB /* PortfolioUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PortfolioUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		788EA4AB1F0E06A200F167AB /* Portfolio+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Portfolio+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		788EA4AC1F0E06A200F167AB /* Stock+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stock+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		78BFF7191F0D76FC007582E4 /* AddPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPortfolioViewController.swift; sourceTree = "<group>"; };
+		B03D42F649CBFFDD1185C851 /* Pods-FinanceGuru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceGuru.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinanceGuru/Pods-FinanceGuru.release.xcconfig"; sourceTree = "<group>"; };
+		E7603CE11F98ABF72C4A5C05 /* Pods_FinanceGuru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceGuru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7818792A1F0ACAA600DC4F31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4EDA638E67DB7FDF07618A2 /* Pods_FinanceGuru.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A8B5E88950E8422D037975C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7603CE11F98ABF72C4A5C05 /* Pods_FinanceGuru.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		780196E21F119396000D64DC /* NJIT */ = {
+			isa = PBXGroup;
+			children = (
+				7818794D1F0AD17000DC4F31 /* client.swift */,
+			);
+			name = NJIT;
+			sourceTree = "<group>";
+		};
+		781879241F0ACAA600DC4F31 = {
+			isa = PBXGroup;
+			children = (
+				7818792F1F0ACAA600DC4F31 /* FinanceGuru */,
+				7818792E1F0ACAA600DC4F31 /* Products */,
+				BA68EB05E2E3EEEDC7144BF3 /* Pods */,
+				2A8B5E88950E8422D037975C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7818792E1F0ACAA600DC4F31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7818792D1F0ACAA600DC4F31 /* FinanceGuru.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7818792F1F0ACAA600DC4F31 /* FinanceGuru */ = {
+			isa = PBXGroup;
+			children = (
+				781879301F0ACAA600DC4F31 /* AppDelegate.swift */,
+				7818795E1F0AF06900DC4F31 /* SelfModel */,
+				7818795D1F0AF03C00DC4F31 /* Assets */,
+				7818795C1F0AF02500DC4F31 /* ViewController */,
+				781879521F0AD17500DC4F31 /* Client */,
+				7818794B1F0AD13600DC4F31 /* Helper */,
+				781879551F0AE1FD00DC4F31 /* Model */,
+			);
+			path = FinanceGuru;
+			sourceTree = "<group>";
+		};
+		7818794B1F0AD13600DC4F31 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				781879A51F0C77BD00DC4F31 /* CoreDataManager.swift */,
+				781879611F0BED3100DC4F31 /* clientHelper.swift */,
+				781879451F0AD11700DC4F31 /* commonFunctions.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		781879521F0AD17500DC4F31 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				780196E41F1193CF000D64DC /* TickerStructs.swift */,
+				7818794C1F0AD17000DC4F31 /* Constants.swift */,
+				780196E21F119396000D64DC /* NJIT */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		781879551F0AE1FD00DC4F31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7852060F1F141F1700B5D384 /* StockTransactions+CoreDataProperties.swift */,
+				788EA4AA1F0E06A200F167AB /* PortfolioUser+CoreDataProperties.swift */,
+				788EA4AB1F0E06A200F167AB /* Portfolio+CoreDataProperties.swift */,
+				788EA4AC1F0E06A200F167AB /* Stock+CoreDataProperties.swift */,
+				7818793F1F0ACAA600DC4F31 /* Info.plist */,
+				781879581F0AE55700DC4F31 /* GoogleService-Info.plist */,
+				781879531F0AE1F700DC4F31 /* CoreDataStack.swift */,
+				781879371F0ACAA600DC4F31 /* FinanceGuru.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7818795C1F0AF02500DC4F31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				785E1C9D1F0DD6880092CF51 /* StockTableViewCell.swift */,
+				7818795A1F0AEFD100DC4F31 /* PortfolioTableViewController.swift */,
+				78BFF7191F0D76FC007582E4 /* AddPortfolioViewController.swift */,
+				781879321F0ACAA600DC4F31 /* LoginViewController.swift */,
+				7818795F1F0AF0A100DC4F31 /* StocksTableViewController.swift */,
+				780196E61F119E84000D64DC /* TickerPickerViewController.swift */,
+				780196E81F11A291000D64DC /* StockDetailViewController.swift */,
+				785206121F14218500B5D384 /* StockTransactionTableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7818795D1F0AF03C00DC4F31 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				781879341F0ACAA600DC4F31 /* Main.storyboard */,
+				7818793A1F0ACAA600DC4F31 /* Assets.xcassets */,
+				7818793C1F0ACAA600DC4F31 /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		7818795E1F0AF06900DC4F31 /* SelfModel */ = {
+			isa = PBXGroup;
+			children = (
+				781879971F0C700700DC4F31 /* PortfolioUser+CoreDataClass.swift */,
+				781879951F0C700700DC4F31 /* Stock+CoreDataClass.swift */,
+				7852060E1F141F1700B5D384 /* StockTransactions+CoreDataClass.swift */,
+				781879A11F0C73DF00DC4F31 /* Portfolio+CoreDataClass.swift */,
+			);
+			name = SelfModel;
+			sourceTree = "<group>";
+		};
+		BA68EB05E2E3EEEDC7144BF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				719DAC646E11712AFDD256C8 /* Pods-FinanceGuru.debug.xcconfig */,
+				B03D42F649CBFFDD1185C851 /* Pods-FinanceGuru.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7818792C1F0ACAA600DC4F31 /* FinanceGuru */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781879421F0ACAA600DC4F31 /* Build configuration list for PBXNativeTarget "FinanceGuru" */;
+			buildPhases = (
+				9A57554EF9EC29ED340B4591 /* [CP] Check Pods Manifest.lock */,
+				781879291F0ACAA600DC4F31 /* Sources */,
+				7818792A1F0ACAA600DC4F31 /* Frameworks */,
+				7818792B1F0ACAA600DC4F31 /* Resources */,
+				376BFB1FA49D697BBA2992BA /* [CP] Embed Pods Frameworks */,
+				1E493953785543F88428EFA2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinanceGuru;
+			productName = FinanceGuru;
+			productReference = 7818792D1F0ACAA600DC4F31 /* FinanceGuru.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		781879251F0ACAA600DC4F31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Raxit Cholera";
+				TargetAttributes = {
+					7818792C1F0ACAA600DC4F31 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = R6BV4J7KB9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 781879281F0ACAA600DC4F31 /* Build configuration list for PBXProject "FinanceGuru" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 781879241F0ACAA600DC4F31;
+			productRefGroup = 7818792E1F0ACAA600DC4F31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7818792C1F0ACAA600DC4F31 /* FinanceGuru */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7818792B1F0ACAA600DC4F31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781879591F0AE55700DC4F31 /* GoogleService-Info.plist in Resources */,
+				7818793E1F0ACAA600DC4F31 /* LaunchScreen.storyboard in Resources */,
+				7818793B1F0ACAA600DC4F31 /* Assets.xcassets in Resources */,
+				781879361F0ACAA600DC4F31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E493953785543F88428EFA2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinanceGuru/Pods-FinanceGuru-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		376BFB1FA49D697BBA2992BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinanceGuru/Pods-FinanceGuru-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A57554EF9EC29ED340B4591 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		781879291F0ACAA600DC4F31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780196E91F11A291000D64DC /* StockDetailViewController.swift in Sources */,
+				785206131F14218500B5D384 /* StockTransactionTableViewController.swift in Sources */,
+				788EA4AF1F0E06A200F167AB /* Stock+CoreDataProperties.swift in Sources */,
+				785206101F141F1700B5D384 /* StockTransactions+CoreDataClass.swift in Sources */,
+				788EA4AE1F0E06A200F167AB /* Portfolio+CoreDataProperties.swift in Sources */,
+				781879331F0ACAA600DC4F31 /* LoginViewController.swift in Sources */,
+				785206111F141F1700B5D384 /* StockTransactions+CoreDataProperties.swift in Sources */,
+				78BFF71A1F0D76FC007582E4 /* AddPortfolioViewController.swift in Sources */,
+				781879601F0AF0A100DC4F31 /* StocksTableViewController.swift in Sources */,
+				781879501F0AD17000DC4F31 /* client.swift in Sources */,
+				781879311F0ACAA600DC4F31 /* AppDelegate.swift in Sources */,
+				781879A61F0C77BD00DC4F31 /* CoreDataManager.swift in Sources */,
+				780196E71F119E84000D64DC /* TickerPickerViewController.swift in Sources */,
+				7818799D1F0C700700DC4F31 /* PortfolioUser+CoreDataClass.swift in Sources */,
+				781879481F0AD11700DC4F31 /* commonFunctions.swift in Sources */,
+				7818795B1F0AEFD100DC4F31 /* PortfolioTableViewController.swift in Sources */,
+				785E1C9E1F0DD6880092CF51 /* StockTableViewCell.swift in Sources */,
+				781879A31F0C73DF00DC4F31 /* Portfolio+CoreDataClass.swift in Sources */,
+				781879621F0BED3100DC4F31 /* clientHelper.swift in Sources */,
+				780196E51F1193CF000D64DC /* TickerStructs.swift in Sources */,
+				7818799B1F0C700700DC4F31 /* Stock+CoreDataClass.swift in Sources */,
+				781879391F0ACAA600DC4F31 /* FinanceGuru.xcdatamodeld in Sources */,
+				788EA4AD1F0E06A200F167AB /* PortfolioUser+CoreDataProperties.swift in Sources */,
+				7818794F1F0AD17000DC4F31 /* Constants.swift in Sources */,
+				781879541F0AE1F700DC4F31 /* CoreDataStack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		781879341F0ACAA600DC4F31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				781879351F0ACAA600DC4F31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7818793C1F0ACAA600DC4F31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7818793D1F0ACAA600DC4F31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		781879401F0ACAA600DC4F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Raxit Cholera (R6BV4J7KB9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Raxit Cholera (R6BV4J7KB9)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		781879411F0ACAA600DC4F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Raxit Cholera (R6BV4J7KB9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Raxit Cholera (R6BV4J7KB9)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		781879431F0ACAA600DC4F31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 719DAC646E11712AFDD256C8 /* Pods-FinanceGuru.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = R6BV4J7KB9;
+				INFOPLIST_FILE = FinanceGuru/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kodeguide.FinanceGuru;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		781879441F0ACAA600DC4F31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B03D42F649CBFFDD1185C851 /* Pods-FinanceGuru.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = R6BV4J7KB9;
+				INFOPLIST_FILE = FinanceGuru/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kodeguide.FinanceGuru;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		781879281F0ACAA600DC4F31 /* Build configuration list for PBXProject "FinanceGuru" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781879401F0ACAA600DC4F31 /* Debug */,
+				781879411F0ACAA600DC4F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781879421F0ACAA600DC4F31 /* Build configuration list for PBXNativeTarget "FinanceGuru" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781879431F0ACAA600DC4F31 /* Debug */,
+				781879441F0ACAA600DC4F31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		781879371F0ACAA600DC4F31 /* FinanceGuru.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				781879381F0ACAA600DC4F31 /* FinanceGuru.xcdatamodel */,
+			);
+			currentVersion = 781879381F0ACAA600DC4F31 /* FinanceGuru.xcdatamodel */;
+			path = FinanceGuru.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 781879251F0ACAA600DC4F31 /* Project object */;
+}

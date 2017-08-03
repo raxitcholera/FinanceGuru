@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Portfolio" representedClassName=".Portfolio" syncable="YES">
+        <attribute name="created_dt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="portfolio_deleted" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="portfolio_name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="stock_count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="portfoliouser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PortfolioUser" inverseName="portfolios" inverseEntity="PortfolioUser" syncable="YES"/>
+        <relationship name="stocks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Stock" inverseName="portfolio" inverseEntity="Stock" syncable="YES"/>
+    </entity>
+    <entity name="PortfolioUser" representedClassName=".PortfolioUser" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
+        <attribute name="userID" attributeType="String" syncable="YES"/>
+        <attribute name="username" attributeType="String" syncable="YES"/>
+        <relationship name="portfolios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Portfolio" inverseName="portfoliouser" inverseEntity="Portfolio" syncable="YES"/>
+    </entity>
+    <entity name="Stock" representedClassName=".Stock" syncable="YES">
+        <attribute name="costbasis" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="costbasisusd" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gain" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gain_percent" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="qty" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stock_deleted" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stockname" attributeType="String" syncable="YES"/>
+        <attribute name="ticker" attributeType="String" syncable="YES"/>
+        <relationship name="portfolio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Portfolio" inverseName="stocks" inverseEntity="Portfolio" syncable="YES"/>
+        <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StockTransactions" inverseName="stock" inverseEntity="StockTransactions" syncable="YES"/>
+    </entity>
+    <entity name="StockTransactions" representedClassName=".StockTransactions" syncable="YES">
+        <attribute name="action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="qty" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="stock" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stock" inverseName="transaction" inverseEntity="Stock" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Portfolio" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="PortfolioUser" positionX="-45" positionY="81" width="128" height="135"/>
+        <element name="Stock" positionX="-54" positionY="27" width="128" height="225"/>
+        <element name="StockTransactions" positionX="-63" positionY="99" width="128" height="120"/>
+    </elements>
+</model>
