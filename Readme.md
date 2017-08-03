@@ -57,16 +57,7 @@ You can delete a portfolio by sliding the portfolio table cell to the left <i cl
 
 Future Work
 -------------
-#### <i class="icon-file"></i> Add New Stock
-
-Implement a screen which would take in the stock ticker and find the current price of it from yahoo or google finance api's. Also take in the units of stock bought and keep track of the information
-
 #### <i class="icon-file"></i> Live Mode
 
 Implement in stocks of the portfolio screen a toggle that will allow the user to fetch live stock prices of his stocks and update the tableview for his reference at an interval of about 30-45sec. Implement this with the help of background process.
-
-#### <i class="icon-file"></i> Transaction Detail Section
-
-Provide a way a user can see all the stock's transaction with details like date of transaction and cost of buy/sell for reference.
-
 ----------
