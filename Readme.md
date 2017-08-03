@@ -57,7 +57,9 @@ You can delete a portfolio by sliding the portfolio table cell to the left <i cl
 
 Future Work
 -------------
+
 #### <i class="icon-file"></i> Live Mode
 
 Implement in stocks of the portfolio screen a toggle that will allow the user to fetch live stock prices of his stocks and update the tableview for his reference at an interval of about 30-45sec. Implement this with the help of background process.
+
 ----------
