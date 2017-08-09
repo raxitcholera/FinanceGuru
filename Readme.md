@@ -12,7 +12,7 @@ New accounts are only possible to be created using the FB and Google login.
 
 ----------
 
-**Note:**Please run the program using the FinanceGuru.xcworkspace file.
+**Note: Please run the program using the FinanceGuru.xcworkspace file.**
 
 
 Use Case
