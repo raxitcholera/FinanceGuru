@@ -40,7 +40,9 @@ extension client {
                 apiCompletionHandler(nil, NSError(domain: "ProcessTask", code: 1, userInfo: userInfo))
             }
             guard (error == nil) else {
-                sendError("There was an error with your request: \(String(describing: error!.localizedDescription))")
+                if error!.localizedDescription != "cancelled" {
+                    sendError("There was an error with your request: \(String(describing: error!.localizedDescription))")
+                }
                 return
             }
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
