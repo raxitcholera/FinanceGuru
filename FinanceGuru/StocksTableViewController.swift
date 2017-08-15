@@ -15,6 +15,9 @@ class StocksTableViewController: UIViewController, UITableViewDelegate, UITableV
     private var stockArray: [Stock]!
     var UserAction:stockAction?
     private var downloadedStocks = [[String:Any]]()
+    
+    var searchTask: URLSessionDataTask?
+    
     @IBOutlet weak var stockTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,6 +143,20 @@ class StocksTableViewController: UIViewController, UITableViewDelegate, UITableV
             self.refreshView()
         }
     
+    }
+    
+    func refreshGainFor(tickers:[String]) {
+        
+        startNetworkinUseIndicator()
+        
+        searchTask = client.sharedInstance.getTickerGainForTicker(tickers) { (stockLastPrice, error) in
+            self.searchTask = nil
+            stopNetworkinUseIndicator()
+            guard error == nil else{
+                //showAlertwith(title: "Google finance error", message: "Something went wrong fetching the last price", vc: self)
+                return
+            }
+        }
     }
     
     func gotoDetailView(selectedStock:Stock) {

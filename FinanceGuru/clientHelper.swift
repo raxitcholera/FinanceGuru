@@ -259,6 +259,32 @@ extension client {
         return task
     }
     
+    func getTickerGainForTicker(_ tickers: [String], completionHandlerForTicker: @escaping (_ result: [GoogleTickers]?, _ error: NSError?) -> Void) -> URLSessionDataTask? {
+        
+        var parameters = [String:AnyObject]()
+        parameters[Constants.ParameterKeys.GoogleQuery] =  googleQParamFromPortfolio(tickers) as AnyObject
+        parameters[Constants.ParameterKeys.Client] = "ig" as AnyObject
+        
+        
+        let task = getDataFromURL(url: GoogleURLFromParameters(parameters,withPathExtension: Constants.Methods.GoogleStoclPrice), applyOffset: true) { (response, error) in
+            
+            if let error = error {
+                completionHandlerForTicker(nil, error as NSError)
+            } else {
+                if let result = response as? [[String:AnyObject]] {
+                    
+                    let tickers = GoogleTickers.priceFromResults(result)
+                    completionHandlerForTicker(tickers, nil)
+                    
+                } else {
+                    completionHandlerForTicker(nil, NSError(domain: "getTickerForSearchString parsing", code: 0, userInfo: [NSLocalizedDescriptionKey: "Could not parse getTickerForSearchString"]))
+                }
+            }
+        }
+        
+        return task
+    }
+    
     func googleQParamFromPortfolio(_ tickers:[String])->String{
         var returnString = "NSE:"
         for ticker in tickers {
