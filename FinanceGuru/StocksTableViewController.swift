@@ -13,8 +13,10 @@ class StocksTableViewController: UIViewController, UITableViewDelegate, UITableV
 
     var selectedPortfolio:Portfolio?
     private var stockArray: [Stock]!
+    private var tempStockArray:[Stock]!
     var UserAction:stockAction?
     private var downloadedStocks = [[String:Any]]()
+    var refreshControl: UIRefreshControl!
     
     var searchTask: URLSessionDataTask?
     
@@ -37,6 +39,14 @@ class StocksTableViewController: UIViewController, UITableViewDelegate, UITableV
         }
 //        title = "\(String(describing: selectedPortfolio?.portfolio_name!))'s Stocks"
         title = "Portfolio Stocks"
+        
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(StocksTableViewController.refreshView), for: UIControlEvents.valueChanged)
+        stockTableView.addSubview(refreshControl)
+        
+        
     }
 
     func refreshView()
@@ -45,6 +55,8 @@ class StocksTableViewController: UIViewController, UITableViewDelegate, UITableV
         performOnMainthread {
             self.stockTableView.reloadData()
         }
+        //Add the call to google here to update the stock price to coredata
+        refreshControl.endRefreshing()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -145,7 +157,9 @@ class StocksTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     }
     
-    func refreshGainFor(tickers:[String]) {
+    func refreshStockGainFor(tickers:[String]) {
+        
+//        tempStockArray = selectedPortfolio?.stocks?.allObjects as! [Stock]
         
         startNetworkinUseIndicator()
         
