@@ -36,7 +36,7 @@ class TickerPickerViewController: UIViewController {
         
     }
 
-    func handleSingleTap(_ recognizer: UITapGestureRecognizer) {
+    @objc func handleSingleTap(_ recognizer: UITapGestureRecognizer) {
         view.endEditing(true)
     }
 

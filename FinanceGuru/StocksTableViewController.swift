@@ -49,7 +49,7 @@ class StocksTableViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
 
-    func refreshView()
+    @objc func refreshView()
     {
         stockArray = selectedPortfolio?.stocks?.allObjects as! [Stock]
         performOnMainthread {

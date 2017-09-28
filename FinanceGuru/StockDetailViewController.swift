@@ -134,7 +134,7 @@ class StockDetailViewController: UIViewController {
         
     }
     
-    func doneDatePickerPressed() {
+    @objc func doneDatePickerPressed() {
         let dateFormatter1 = DateFormatter()
         dateFormatter1.dateStyle = .medium
         dateFormatter1.timeStyle = .none
@@ -143,10 +143,10 @@ class StockDetailViewController: UIViewController {
         }
         dateofAction.resignFirstResponder()
     }
-    func cancelClick(){
+    @objc func cancelClick(){
         dateofAction.resignFirstResponder()
     }
-    func datePickerValueChanged(sender:UIDatePicker) {
+    @objc func datePickerValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
